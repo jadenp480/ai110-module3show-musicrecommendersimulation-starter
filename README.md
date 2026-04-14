@@ -17,15 +17,18 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
+This recommender scores each song by comparing song features with a user's taste profile.
 
-Some prompts to answer:
+- Each `Song` uses: `genre`, `mood`, and `energy`.
+- `UserProfile` stores the user's favorite genres, favorite moods, target energy, energy tolerance, preferred danceability, and preferred acousticness.
+- The `Recommender` computes a score by giving points for genre and mood matches and by measuring how close the song's energy is to the user's target.
+- Songs are recommended by sorting them from highest score to lowest.
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+Real-world recommenders like Spotify analyze your listening history and compare it against millions of songs using features such as genre, mood, energy, and acoustic qualities to surface tracks that match your taste. My version prioritizes a simpler scoring approach: matching user preferences (favorite genres, moods, target energy range, danceability, and acoustic preference) directly against song attributes to rank candidates by similarity. The `Song` object stores id, title, artist, genre, mood, energy, tempo_bpm, valence, danceability, and acousticness, while `UserProfile` captures favorite_genres, favorite_moods, target_energy, energy_tolerance, preferred_danceability, and preferred_acousticness to enable straightforward preference matching.
+
+
+
+
 
 You can include a simple diagram or bullet list if helpful.
 
