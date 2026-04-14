@@ -31,10 +31,6 @@ Real-world recommenders like Spotify analyze your listening history and compare 
 
 
 
-
-
-You can include a simple diagram or bullet list if helpful.
-
 ---
 
 ## Example Output
